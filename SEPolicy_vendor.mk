@@ -1,8 +1,8 @@
-# Board specific SELinux policy variable definitions
 SEPOLICY_PATH:= device/qcom/sepolicy
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR := \
     $(BOARD_PLAT_PUBLIC_SEPOLICY_DIR) \
-    $(SEPOLICY_PATH)/generic/public
+    $(SEPOLICY_PATH)/generic/public \
+    $(SEPOLICY_PATH)/generic/public/attribute
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
     $(BOARD_PLAT_PRIVATE_SEPOLICY_DIR) \
@@ -10,7 +10,8 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
 
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR := \
     $(BOARD_PLAT_PUBLIC_SEPOLICY_DIR) \
-    $(SEPOLICY_PATH)/qva/public
+    $(SEPOLICY_PATH)/qva/public \
+    $(SEPOLICY_PATH)/qva/public/attribute
 
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := \
     $(BOARD_PLAT_PRIVATE_SEPOLICY_DIR) \
@@ -28,7 +29,7 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS := \
     $(SEPOLICY_PATH)/generic/product/private \
     $(SEPOLICY_PATH)/qva/product/private
 
-ifeq (,$(filter sdm845 sdm710 msm8937 msm8953, $(TARGET_BOARD_PLATFORM)))
+ifeq (,$(filter sdm845 sdm710 sdm660 msm8937 msm8953 msm8998, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS := \
        $(BOARD_SEPOLICY_DIRS) \
        $(SEPOLICY_PATH) \
@@ -51,7 +52,7 @@ ifeq (,$(filter sdm845 sdm710 msm8937 msm8953, $(TARGET_BOARD_PLATFORM)))
     endif
 endif
 
-ifneq (,$(filter sdm845 sdm710 msm8937 msm8953, $(TARGET_BOARD_PLATFORM)))
+ifneq (,$(filter sdm845 sdm710 sdm660 msm8937 msm8953 msm8998, $(TARGET_BOARD_PLATFORM)))
     BOARD_SEPOLICY_DIRS := \
                  $(BOARD_SEPOLICY_DIRS) \
                  $(SEPOLICY_PATH) \

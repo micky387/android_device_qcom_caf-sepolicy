@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2016-2018, 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -42,6 +42,10 @@ attribute hal_perf;
 attribute hal_perf_client;
 attribute hal_perf_server;
 
+attribute wifidisplayhalservice;
+attribute wifidisplayhalservice_client;
+attribute wifidisplayhalservice_server;
+
 attribute hal_alarm_qti;
 attribute hal_alarm_qti_client;
 attribute hal_alarm_qti_server;
@@ -70,13 +74,13 @@ attribute hal_voiceprint;
 attribute hal_voiceprint_server;
 attribute hal_voiceprint_client;
 
-attribute vendor_hal_factory_qti;
-attribute vendor_hal_factory_qti_client;
-attribute vendor_hal_factory_qti_server;
-
 attribute hal_wigig_npt;
 attribute hal_wigig_npt_client;
 attribute hal_wigig_npt_server;
+
+attribute hal_fstman;
+attribute hal_fstman_client;
+attribute hal_fstman_server;
 
 attribute hal_qdutils_disp;
 attribute hal_qdutils_disp_client;
@@ -93,8 +97,6 @@ attribute hal_soter_server;
 attribute hal_sensorscalibrate_qti;
 attribute hal_sensorscalibrate_qti_client;
 attribute hal_sensorscalibrate_qti_server;
-# All types in /mnt/vendor/persist
-attribute vendor_persist_type;
 
 attribute hal_scve;
 attribute hal_scve_client;
@@ -111,6 +113,10 @@ attribute hal_qseecom_server;
 attribute hal_wifilearner;
 attribute hal_wifilearner_client;
 attribute hal_wifilearner_server;
+
+attribute hal_srvctracker;
+attribute hal_srvctracker_client;
+attribute hal_srvctracker_server;
 
 attribute hal_fm;
 attribute hal_fm_client;
